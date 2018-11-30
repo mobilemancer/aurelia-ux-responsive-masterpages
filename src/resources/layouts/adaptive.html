@@ -1,0 +1,31 @@
+<template>
+
+  <div class="au-animate" anim-enter="transition.bounceLeftIn" anim-leave="transition.bounceRightOut">
+
+    <ux-grid fluid>
+
+      <!-- padding -->
+      <ux-grid-cell if.bind="uxResponsive.md || uxResponsive.lg || uxResponsive.xl" md="1" lg="2" xl="3">
+      </ux-grid-cell>
+      <!-- padding -->
+
+      <!-- main window -->
+      <ux-grid-cell sm="12" md="10" lg="8" xl="6">
+
+        <!-- main content -->
+        <slot name="main"></slot>
+        <!-- main content -->
+
+      </ux-grid-cell>
+      <!-- main window -->
+
+      <!-- padding -->
+      <ux-grid-cell if.bind="uxResponsive.md || uxResponsive.lg || uxResponsive.xl" md="1" lg="2" xl="3">
+      </ux-grid-cell>
+      <!-- padding -->
+
+    </ux-grid>
+
+  </div>
+
+</template>
