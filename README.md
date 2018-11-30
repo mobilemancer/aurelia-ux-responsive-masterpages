@@ -1,0 +1,1 @@
+# aurelia-ux-responsive-masterpages
