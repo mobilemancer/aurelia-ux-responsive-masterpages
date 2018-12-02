@@ -6,10 +6,20 @@ export class App {
 
   configureRouter(config: RouterConfiguration): void {
     config.map([
+      // Home
+      {
+        route: "home",
+        name: "home",
+        moduleId: PLATFORM.moduleName("./modules/home/home"),
+        layoutViewModel: PLATFORM.moduleName("resources/layouts/adaptive"),
+        nav: true,
+        title: "Home",
+        settings: { auth: false }
+      },
       // User page
       {
-        route: "user",
-        name: "user",
+        route: "user-info",
+        name: "user-info",
         moduleId: PLATFORM.moduleName("./modules/user/info"),
         layoutViewModel: PLATFORM.moduleName("resources/layouts/adaptive"),
         nav: true,

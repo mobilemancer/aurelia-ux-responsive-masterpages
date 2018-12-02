@@ -13,9 +13,12 @@ export function configure(aurelia: Aurelia) {
     .standardConfiguration()
     .feature(PLATFORM.moduleName('resources/index'));
 
+  aurelia.use
+    .plugin(PLATFORM.moduleName("@aurelia-ux/components"))
+    .plugin(PLATFORM.moduleName("@aurelia-ux/core"));
 
   aurelia.use
-    .plugin(PLATFORM.moduleName("@aurelia-ux/core"));
+    .plugin(PLATFORM.moduleName('aurelia-animator-velocity'));
 
   // Uncomment the line below to enable animation.
   // aurelia.use.plugin(PLATFORM.moduleName('aurelia-animator-css'));

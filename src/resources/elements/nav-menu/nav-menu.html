@@ -1,0 +1,40 @@
+<template>
+  <require from="./nav-menu.css"></require>
+
+  <div id="nav-menu">
+
+    <!-- <div if.bind="uxResponsive.xs || uxResponsive.sm">
+      <div class="menu-button">
+        <ux-button click.trigger="toggleDropdown()">
+          <ux-icon icon="menu"></ux-icon>
+        </ux-button>
+      </div>
+      <div class="dropdown-content" if.bind="showDropdown" blur.bind='showDropdown'>
+        <nav>
+          <ul>
+            <li repeat.for="nav of links" class="${nav.isActive ? 'active' : ''}">
+              <a click.trigger="navigate(nav.href)">${nav.title}</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div> -->
+
+    <!-- <div if.bind="uxResponsive.md || uxResponsive.lg || uxResponsive.xl"> -->
+    <div>
+      <div class="${!!isChildRouter ? 'col-12' : 'col-10'}">
+        <nav>
+          <div class="regular-content">
+            <ul>
+              <li repeat.for="nav of links" class="${nav.isActive ? 'active' : ''}">
+                <a href.bind="nav.href">${nav.title}</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+  </div>
+
+</template>

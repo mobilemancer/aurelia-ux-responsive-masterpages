@@ -1,0 +1,13 @@
+#top-bar {
+  height: var(--menu-height);
+  background-color: var(--aurelia-ux--design-primary-dark);
+  color: var(--aurelia-ux--design-primary-light);
+}
+
+#top-bar ux-grid {
+  height: var(--menu-height);
+}
+
+#top-bar ux-grid-cell {
+  height: var(--menu-height);
+}

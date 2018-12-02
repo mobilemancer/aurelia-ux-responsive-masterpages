@@ -3,5 +3,7 @@ import { UxResponsiveUtilities } from '@aurelia-ux/grid';
 
 @autoinject
 export class Adaptive {
-  constructor(public uxResponsive: UxResponsiveUtilities) { }
+  constructor(public uxResponsive: UxResponsiveUtilities) {
+    console.log(uxResponsive);
+  }
 }
