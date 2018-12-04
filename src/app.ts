@@ -2,13 +2,12 @@ import { autoinject, PLATFORM } from 'aurelia-framework';
 import { RouterConfiguration } from 'aurelia-router';
 
 export class App {
-  message = 'Hello World!';
 
   configureRouter(config: RouterConfiguration): void {
     config.map([
       // Home
       {
-        route: "home",
+        route: ["", "home"],
         name: "home",
         moduleId: PLATFORM.moduleName("./modules/home/home"),
         layoutViewModel: PLATFORM.moduleName("resources/layouts/adaptive"),
@@ -16,12 +15,12 @@ export class App {
         title: "Home",
         settings: { auth: false }
       },
-      // User page
+      // User info
       {
         route: "user-info",
         name: "user-info",
         moduleId: PLATFORM.moduleName("./modules/user/info"),
-        layoutViewModel: PLATFORM.moduleName("resources/layouts/adaptive"),
+        layoutViewModel: PLATFORM.moduleName("resources/layouts/two-column"),
         nav: true,
         title: "User Info",
         settings: { auth: false }

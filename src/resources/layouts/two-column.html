@@ -1,0 +1,40 @@
+<template>
+
+  <div class="au-animate" anim-enter="transition.bounceLeftIn" anim-leave="transition.bounceRightOut">
+
+    <div class="ux-grid ux-grid--remove-padding">
+
+      <!-- padding -->
+      <div class="side-bar ux-grid-cell ux-grid-cell--md-1 ux-grid-cell--lg-1 ux-grid-cell--xl-2" if.bind="uxResponsive.md || uxResponsive.lg || uxResponsive.xl">
+      </div>
+      <!-- padding -->
+
+      <!-- main window -->
+      <div class="ux-grid-cell ux-grid-cell--sm-8 ux-grid-cell--md-7 ux-grid-cell--lg-7 ux-grid-cell--xl-6">
+
+        <!-- main content -->
+        <slot name="mainblock"></slot>
+        <!-- main content -->
+
+      </div>
+      <!-- main window -->
+
+      <!-- side-bar -->
+      <div class="side-bar-content ux-grid-cell ux-grid-cell--sm-4 ux-grid-cell--md-3 ux-grid-cell--lg-3 ux-grid-cell--xl-2"
+        show.bind="uxResponsive.sm || uxResponsive.md || uxResponsive.lg || uxResponsive.xl">
+
+        <slot name="sideblock">Fallback content of slot named "sideblock"</slot>
+
+      </div>
+      <!-- side-bar -->
+
+      <!-- padding -->
+      <div class="side-bar ux-grid-cell ux-grid-cell--md-1 ux-grid-cell--lg-1 ux-grid-cell--xl-2" if.bind="uxResponsive.md || uxResponsive.lg || uxResponsive.xl">
+      </div>
+      <!-- padding -->
+
+    </div>
+
+  </div>
+
+</template>
