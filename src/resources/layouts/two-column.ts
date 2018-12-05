@@ -3,7 +3,5 @@ import { UxResponsiveUtilities } from '@aurelia-ux/grid';
 
 @autoinject
 export class TwoColumn {
-  constructor(public uxResponsive: UxResponsiveUtilities) {
-    console.log(uxResponsive);
-  }
+  constructor(public uxResponsive: UxResponsiveUtilities) { }
 }
